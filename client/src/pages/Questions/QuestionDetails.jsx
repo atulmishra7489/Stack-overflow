@@ -75,7 +75,7 @@ const QuestionDetails = () => {
     const User = useSelector((state) => (state.currentUserReducer))
     const  location = useLocation()
     // console.log(location)
-    const url = 'https://stack-overflow-api-9nep.onrender.com'
+    const url = 'https://stack-overflow-atul.netlify.app'
 
     const handlePostAns = (e, answerLength) => {
         e.preventDefault()

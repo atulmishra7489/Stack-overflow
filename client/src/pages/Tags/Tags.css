@@ -33,3 +33,11 @@
     color: #323232;
     line-height: 17px;
 }
+@media screen and (max-width:980px) {
+    .tags-h1{
+        font-size: 2rem !important;
+    }
+    .tags-p{
+        font-size: 1.3rem !important;
+    }
+}

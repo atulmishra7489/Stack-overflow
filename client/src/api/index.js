@@ -1,6 +1,9 @@
 import axios from 'axios'
+import { commonrequest } from './ApiCall'
 
-const API = axios.create({ baseURL: 'https://stack-overflow-api-9nep.onrender.com'})
+// baseURL: 'https://stack-overflow-api-9nep.onrender.com'
+const base_URL = 'http://localhost:5000'
+const API = axios.create({ baseURL: 'http://localhost:5000'})
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('Profile')){
@@ -9,8 +12,18 @@ API.interceptors.request.use((req) => {
     return req;
 })
 
+export const sentOtpFunction = async(data)=>{
+        return await commonrequest("POST",`${base_URL}/user/generateOTP`,data)
+}
+export const userVerify = async(data)=>{
+    return await commonrequest("POST",`${base_URL}/user/verifyOTP`,data)
+}
+
 export const logIn = (authData) => API.post('/user/login', authData);
 export const signUp = (authData) => API.post('/user/signup', authData);
+
+// export const generate_OTP = (data) => API.post('/user/generateOTP', data);
+// export const verify_OTP = (username,code) => API.get('/user/verifyOTP', { params : { username, code }});
 
 export const postQuestion = (questionData) => API.post('/questions/Ask', questionData)
 export const getAllQuestions = () => API.get('/questions/get');

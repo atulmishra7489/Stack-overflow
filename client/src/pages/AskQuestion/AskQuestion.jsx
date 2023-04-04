@@ -28,7 +28,7 @@ const AskQuestion = () => {
   return (
    <div className="ask-question">
         <div className="ask-ques-container">
-            <h1>ask a public Question</h1>
+            <h1>Ask a public Question</h1>
             <form onSubmit={handleSubmit}>
                 <div className="ask-form-container">
                     <label htmlFor="ask-ques-title">

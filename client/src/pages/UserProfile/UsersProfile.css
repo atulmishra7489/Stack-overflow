@@ -18,6 +18,11 @@
     color: #7e7e7e;
 }
 .edit-profile-btn{
+    /* position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+    right: 0; */
     padding: 8px 10px;
     border: solid 1px #7e7e7e;
     border-radius: 2px;
@@ -77,4 +82,10 @@
     border: none;
     margin-left: 10px;
     cursor: pointer;
+}
+@media screen and (max-width:980px) {
+    .user-details{
+        align-items: flex-start;
+        flex-direction: column;
+    }
 }
