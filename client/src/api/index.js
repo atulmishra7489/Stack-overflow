@@ -2,8 +2,8 @@ import axios from 'axios'
 import { commonrequest } from './ApiCall'
 
 // baseURL: 'https://stack-overflow-api-9nep.onrender.com'
-const base_URL = 'http://localhost:5000'
-const API = axios.create({ baseURL: 'http://localhost:5000'})
+const base_URL = 'https://stack-overflow-api-9nep.onrender.com'
+const API = axios.create({ baseURL: 'https://stack-overflow-api-9nep.onrender.com'})
 
 API.interceptors.request.use((req) => {
     if(localStorage.getItem('Profile')){
